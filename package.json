@@ -13,6 +13,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "browser-sync": "2.27.11",
+    "del": "^6.1.1",
     "gulp": "4.0.2",
     "gulp-dart-sass": "^1.0.2",
     "gulp-htmlmin": "^5.0.1",

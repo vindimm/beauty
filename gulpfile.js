@@ -6,6 +6,7 @@ import htmlmin from 'gulp-htmlmin';
 import sass from 'gulp-dart-sass';
 import plumber from 'gulp-plumber';
 import postcss from 'gulp-postcss';
+import del from 'del';
 
 // HTML
 const html = () => {
@@ -26,6 +27,24 @@ const styles = () => {
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
+
+// Images
+const imagesCopy = () => {
+  return gulp.src('source/img/**/*.{jpg,png,svg}')
+    .pipe(gulp.dest('build/img'));
+}
+
+// Copy
+const copy = (done) => {
+  gulp.src(['source/fonts/**/*.{woff2,woff}', 'source/*.ico', 'source/*.webmanifest'], {base: 'source'})
+    .pipe(gulp.dest('build'))
+  done();
+}
+
+// Clean
+const buildClean = () => {
+  return del('build');
+};
 
 // Server
 const server = (done) => {
@@ -53,6 +72,9 @@ const watcher = () => {
 }
 
 export default gulp.series(
+  buildClean,
+  copy,
+  imagesCopy,
   gulp.parallel(
     styles,
     html,

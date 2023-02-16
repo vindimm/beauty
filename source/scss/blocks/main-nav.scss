@@ -1,0 +1,4 @@
+.main-nav__list {
+  @include reset-list;
+  background-color: $color-bg;
+}
