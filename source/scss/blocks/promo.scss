@@ -1,0 +1,102 @@
+.promo {
+  padding-top: 50px;
+  padding-bottom: 120px;
+  background-color: $color-bg;
+}
+
+.promo__wrapper {
+  display: grid;
+  grid-template-columns: minmax(auto, 540px);;
+  gap: 30px;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: $width-desktop) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.promo__card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 160px;
+
+  color: #ffffff;
+  background-color: $color-accent;
+
+  @media (min-width: $width-tablet) {
+    display: block;
+    padding: 35px 220px 35px 40px;
+  }
+}
+
+.promo__card--subscribe {
+  @media (min-width: $width-tablet) {
+    position: relative;
+  }
+}
+
+.promo__card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+  @media (min-width: $width-tablet) {
+    display: block;
+  }
+}
+
+.promo__card-email {
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  margin-right: 20px;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.promo__card-submit {
+  width: 56px;
+  height: 36px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../../img/mail.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.4;
+  }
+
+  @media (min-width: $width-tablet) {
+    position: absolute;
+    top: 44px;
+    right: 44px;
+    width: 140px;
+    height: 106px;
+  }
+}
+
+.promo__card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  
+}
+
+.promo__card-link {
+  color: inherit;
+  text-decoration: none;
+  font-size: 14px;
+}
+

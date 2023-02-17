@@ -1,3 +1,60 @@
 .offers {
   background-color: $color-bg;
 }
+
+.offers__wrapper {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.offers__header {
+  margin-top: 0;
+  margin-bottom: 38px;
+  text-align: center;
+
+  @media (min-width: $width-tablet) {
+    text-align: left;
+  }
+}
+
+.offers__header::before {
+  @media (min-width: $width-tablet) {
+    display: block;
+    content: "";
+    width: 188px;
+    height: 60px;
+    background-image: url("../../img/delivery.svg");
+    position: absolute;
+    top: 60px;
+    right: 50px;
+  }
+}
+
+.offers__list {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, (255px));
+  gap: 30px;
+  justify-content: center;
+  max-width: $width-desktop;
+}
+
+.offers__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+  width: 255px;
+  padding: 25px 30px;
+  background-color: #ffffff;
+}
+
+.offers__price {
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #000000;
+  margin-bottom: 20px;
+}
