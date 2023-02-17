@@ -1,7 +1,83 @@
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+  padding: 36px;
   color: #ffffff;
   background-color: $color-accent;
-  background-image: url("../../img/bg-circles.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+  min-height: 604px;
+  box-sizing: border-box;
+
+  @media (min-width: $width-desktop) {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+.hero::before {
+  @media (min-width: $width-desktop) {
+    display: block;
+    content: "";
+    width: 860px;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -240px;
+
+    background-image: url("../../img/bg-circles.svg");
+    background-repeat: no-repeat;
+    background-size: 860px;
+    background-position: center center;
+  }
+}
+
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+
+  @media (min-width: $width-desktop) {
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+.hero__header {
+  margin-top: 0;
+  margin-bottom: 32px;
+  text-align: center;
+
+  font-size: 48px;
+  line-height: 1.2em;
+  font-weight: 700;
+}
+
+.hero__text {
+  margin-top: 0;
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 14px;
+  max-width: 310px;
+
+  @media (min-width: $width-desktop) {
+    text-align: left;
+  }
+}
+
+.hero__picture {
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: $width-desktop) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -110px;
+  }
 }
