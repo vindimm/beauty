@@ -1,0 +1,35 @@
+.page-header__middle {
+  border-bottom: 1px solid $color-bg;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.page-header__middle-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  @media (min-width: $width-tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.page-header__logo-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  color: $color-accent;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.page-header__logo-text {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
+}

@@ -1,0 +1,23 @@
+.contacts-phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  @media (min-width: $width-tablet) {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+.contacts-phone__phone {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+}
+
+.contacts-phone__callback {
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+}

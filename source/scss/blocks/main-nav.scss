@@ -1,4 +1,37 @@
+.main-nav {
+  background-color: $color-bg;
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+  }
+}
+
 .main-nav__list {
   @include reset-list;
-  background-color: $color-bg;
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    margin: 0 auto;
+  }
+}
+
+.main-nav__item {
+  text-align: center;
+  border-bottom: 1px solid #aaaaaa;
+
+  @media (min-width: $width-tablet) {
+    border: none;
+  }
+}
+
+.main-nav__link {
+  display: block;
+  padding: 16px;
+
+  text-decoration: none;
+  color: $color-text;
+
+  &:hover {
+    color: $color-accent;
+  }
 }

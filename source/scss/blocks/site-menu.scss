@@ -1,0 +1,17 @@
+.site-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include reset-list;
+}
+
+.site-menu__link {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: #000000;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
